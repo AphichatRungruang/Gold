@@ -1,0 +1,123 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.period-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.period-button {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.period-button:hover {
+  border-color: var(--gold-primary);
+}
+
+.period-button.active {
+  background-color: rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+}
+
+.chart-type-select {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.chart-type-select:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 400px;
+  min-height: 300px;
+  max-height: 600px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.prediction-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prediction-label {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.prediction-direction {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.prediction-direction.up {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: var(--up-color);
+}
+
+.prediction-direction.down {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: var(--down-color);
+}
+
+.prediction-confidence {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-left: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .chart-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .period-selector {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .chart-wrapper {
+    height: 300px;
+    min-height: 250px;
+  }
+} 

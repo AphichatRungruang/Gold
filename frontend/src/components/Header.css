@@ -1,0 +1,134 @@
+.header {
+  padding: 1.5rem 0;
+  border-bottom: 2px solid var(--gold-primary);
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-time {
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.price-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  width: 100%;
+}
+
+.current-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  color: var(--gold-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.price-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+}
+
+.price-change {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+
+.price-change.up {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: var(--up-color);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.price-change.down {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: var(--down-color);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.direction-arrow {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.market-status {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  width: 100%;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.status-indicator.online {
+  background-color: var(--up-color);
+  box-shadow: 0 0 5px var(--up-color);
+}
+
+.update-time {
+  margin-left: auto;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header-time {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+  
+  .price-display {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .price-change {
+    margin-top: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+} 
